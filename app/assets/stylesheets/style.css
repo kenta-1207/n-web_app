@@ -1,0 +1,158 @@
+.main{
+  background-color: #f1f8fe;
+}
+
+.form__wrapper{
+  min-height: calc(100vh - 161px);
+}
+
+.page-heading {
+  font-size: 30px;
+  margin: 50px 100px;
+}
+
+.form__text {
+  width: 50%;
+  margin: 5px 100px;
+}
+
+.form_text {
+  width:25%;
+  margin: 5px 100px;
+}
+
+.form_name{
+  margin: 0 100px;
+}
+
+.field{
+  margin: 10px 0;
+}
+
+.actions{
+  margin-bottom: 40px;
+}
+
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form__btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+/* 詳細ページ */
+.item__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.item__hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item__image{
+  width: 40%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.item__detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.item__manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.item__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+
+.card__img {
+  margin-bottom: 16px;
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+}
+
+.item-inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.top_button {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.name-button {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #fff;
+}
+
+.item_name2 {
+  text-decoration: none;
+}
+
+.image-position {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+
+.list1-2 {
+  margin-left: 15px;
+}
+
+.list1-1-1 {
+  margin-left: 25px;
+}
+
+
+.list2-2 {
+  margin-left: 20px;
+}
+
+.list-3 {
+  margin-right: 15px;
+}
+
+.list3-3 {
+  margin-left: 30px;
+}
