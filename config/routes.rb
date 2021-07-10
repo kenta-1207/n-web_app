@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root to: "tops#index"
   resources :items, only: [:index, :new, :create, :show]
   resources :school_lunches, only: [:index, :new, :create]
-  resources :contacts, only: [:create]
+  resources :contacts, only: [:new]
 end
