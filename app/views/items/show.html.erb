@@ -24,7 +24,7 @@
       <% end %>
       <div class="item__image">
         <%= image_tag(@item.image, class: :card__img) %>
-        <a href="/contacts/new" class="btn btn-outline-danger">サンプル依頼する</a>
+        <%= link_to 'サンプル依頼する', new_contact_path, method: :get, class: "btn btn-outline-danger" %>
       </div>
       <table class="table table-bordered">
         <thead>
