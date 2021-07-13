@@ -12,17 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :'お名前' %>
+    <%= form.text_field :current_user.name %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :'メールアドレス' %>
+    <%= form.text_field :current_user.email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :'店名' %>
+    <%= form.text_field :current_user.occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :'メーカー名' %>
     <%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :'商品名' %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :'メッセージ' %>
     <%= form.text_area :content %>
   </div>
 
