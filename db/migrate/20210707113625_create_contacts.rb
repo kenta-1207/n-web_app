@@ -8,7 +8,6 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.string :contact_item_name,       null: false
       t.text :message
       t.references :user,  foreign_key: true
-      t.references :item, foreign_key: true
 
       t.timestamps
     end

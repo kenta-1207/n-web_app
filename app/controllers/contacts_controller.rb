@@ -58,7 +58,6 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      binding.pry
-      params.require.(:contact).permit(:contact_user_name, :contact_user_email, :contact_user_occupation, :contact_manufacturer, :contact_user_name, :message).merge(user_id: current_user.id )
+      params.permit(:contact_user_name, :contact_user_email, :contact_user_occupation, :contact_manufacturer, :contact_user_name, :message).merge(user_id: current_user.id )
     end
 end
