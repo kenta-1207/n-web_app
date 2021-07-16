@@ -1,4 +1,4 @@
 class UserContact < ApplicationRecord
   belongs_to :user
-  belongs_to :content
+  belongs_to :contact
 end
