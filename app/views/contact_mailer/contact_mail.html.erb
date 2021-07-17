@@ -1,5 +1,8 @@
+<h1>サンプル依頼が届きました。</h1>
 
-
-<h1>name: <%= @contact.contact_user_name %></h1>
-
-<h2>サンプル依頼が届きました。</h2>
+<h2>お名前: <%= @contact.contact_user_name "様から"%></h2>
+<h3>メール:<%= @contact.contact_user_email %></h3>
+<h4>店名:<%= @contact.contact_user_occupation %></h4>
+<h5>メーカー:<%= @contact.contact_manufacturer %></h5>
+<h6>商品名:<%= @contact.contact_item_name %></h6>
+<h6>メッセージ:<%= @contact.message %></h6>
