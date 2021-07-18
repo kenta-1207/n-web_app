@@ -18,7 +18,7 @@
       </p>
       <% if user_signed_in? && current_user.id == @item.user_id %>
         <div class="item__manage">
-          <%= link_to "編集する", "#",  class: :prototype__btn %>
+          <%= link_to "編集する", edit_item_path(@item.id),method: :get,  class: :prototype__btn %>
           <%= link_to "削除する", "#", class: :prototype__btn %>
         </div>
       <% end %>
@@ -37,10 +37,10 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">@item.manufacturer</th>
-            <td>@iem.item_name</td>
-            <td>@item.standard</td>
-            <td>@item.description</td>
+            <th scope="row"><%= @item.manufacturer %></th>
+            <td><%= @item.item_name %></td>
+            <td><%= @item.standard %></td>
+            <td><%= @item.storage_condition %></td>
           </tr>
         </tbody>
       </table>
@@ -48,7 +48,7 @@
         <div class="item-discription-name">
           <%= '《商品説明》' %>
           <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
-            商品説明文
+            <%= @item.description %>
           </div>
         </div>
       </div>
