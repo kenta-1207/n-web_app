@@ -1,4 +1,5 @@
 class SchoolLunchesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @school_lunches = SchoolLunch.all
