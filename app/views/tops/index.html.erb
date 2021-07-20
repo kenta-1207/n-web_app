@@ -58,7 +58,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
         </ul>
         <div class="d-flex">
+        <% if user_signed_in? && current_user.admin? %>
         <%= link_to '新規掲載', new_item_path, method: :get, class: "top_button" %>
+        <% end %>
         <% if user_signed_in? %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top_button" %>
           <%= link_to current_user.name, class: "name-button" %>
