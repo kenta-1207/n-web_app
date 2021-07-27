@@ -26,10 +26,15 @@
 
   <div class="field">
     <%= f.label :image, "新商品の画像", class: :form_name %><br />
-    <%= f.file_field :image, id:"item_image", class: :form_name %>
+    <%= f.file_field :images, name: 'item[images][]', id:"item_image", class: :form_name %>
   </div>
 
   <div class="actions">
     <%= f.submit "保存する", class: :send, class: :form_name  %>
   </div>
+  <div id="image-list" ></div>
+<% end %>
+
+<% @item.images.each do |image| %>
+  <%= image_tag image, class: 'images' %>
 <% end %>
