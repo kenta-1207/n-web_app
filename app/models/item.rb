@@ -6,7 +6,7 @@ class Item < ApplicationRecord
     validates :standard
     validates :storage_condition
     validates :description
-    validates :image
+    validates :images
     validates :user_id
   end
 

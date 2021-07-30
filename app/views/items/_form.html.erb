@@ -24,15 +24,17 @@
     <%= f.text_area :description, class: :form__text, id:"item_description" %>
   </div>
 
-  <div class="field">
-    <%= f.label :image, "新商品の画像", class: :form_name %><br />
-    <%= f.file_field :images, name: 'item[images][]', id:"item_image", class: :form_name %>
-  </div>
+  <div class="parallel">
+    <div class="field">
+      <%= f.label :images, "新商品の画像", class: :form_name %><br />
+      <%= f.file_field :images, name: 'item[images][]', id:"item_image", class: :form_name %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "保存する", class: :send, class: :form_name  %>
+    <div class="actions">
+      <%= f.submit "保存する", class: :send, class: :form_name  %>
+    </div>
+    <div id="image-list" ></div>
   </div>
-  <div id="image-list" ></div>
 <% end %>
 
 <% @item.images.each do |image| %>
