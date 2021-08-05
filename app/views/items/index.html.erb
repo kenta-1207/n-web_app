@@ -84,11 +84,9 @@
 
       <% @items.each do |item| %>
       <li class='list'>
-        <%#<%= link_to items_path(item.id), method: :get do %>
+        <%#<%= link_to item.images[0], items_path(item.id), method: :get do %>
           <div class='item-img-content'>
-            <% item.images. each do |image| %>
-              <%= image_tag image, class: "item-img"%>
-            <% end %>
+              <%= image_tag item.images[0], class: "item-img"%>
           </div>
         <%#<% end %>
         <div class='item-info'>
