@@ -67,6 +67,7 @@
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
+  display: flex;
 }
 .item__detail{
   display: flex;
@@ -156,4 +157,49 @@
 
 .list3-3 {
   margin-left: 30px;
+}
+
+.show-image {
+  height: 250px;
+  width: 250px;
+}
+
+.contact-button {
+  text-align: center;
+  margin: 10px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact-main {
+  margin-top: 50px;
+}
+
+.contact-top {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 1em 10em;
+}
+
+.contact-under {
+  font-size: 16px;
+}
+
+.contact-return {
+  font-size: 20px;
+  display: inline-block;
+  padding: 0.7em 3em;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.contact-return:hover {
+  background-color: #67c5ff;
+  color: white;
 }

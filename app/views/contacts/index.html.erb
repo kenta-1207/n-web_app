@@ -7,10 +7,24 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+  </head>
 <%= render "shared/second-header" %>
 
-<h1>サンプル依頼ありがとうございます。</h1><br>
-<h1>到着まで今しばらくお待ちください。</h1>
+<body>
 
-<%= render "shared/second-footer" %>
+  <div class='contact'>
+    <div class='contact-top'>
+      <h1>メール送信完了！</h1>
+    </div>
+    <div class='contact-main'>
+      <h1>サンプル依頼ありがとうございます。</h1>
+    </div>
+    <ul class='contact-under'>
+        <li>ただいま、管理人へサンプル依頼を送信しました。</li>
+        <li>メーカーから取り寄せ、担当営業が持参いたします。</li>
+        <li>納品までに、おおむね１週間頂いておりますので、ご了承下さい。</li>
+        <li>又、無償でサンプルが提供できない場合もございますので、合わせてご了承下さい。</li>
+    </ul>
+    <h2 class='contact-return'>
+      <%= link_to "一覧へ戻る", items_path, method: :get %>
+    </h2>
