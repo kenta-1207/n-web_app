@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :items
   resources :school_lunches, only: [:index, :new, :create]
   resources :contacts
+  resources :stock_items, only: [:new, :create]
 end
