@@ -10,8 +10,7 @@ class StockItemsController < ApplicationController
 
   def create
     @stock_item = ItemsTag.new(stock_item_params)
-    if @stock_item.valid?
-      @stock_item.save
+  if @stock_item.save
       return redirect_to root_path
     else
       render "new"
@@ -21,5 +20,6 @@ class StockItemsController < ApplicationController
   private
 
   def stock_item_params
-    params.require(:item_tag).permit(:stock_item_manufacturer, :stock_item_name, :stock_item_standard, :stock_item_strage_condition, :stock_item_description, :name)
+    params.require(:items_tag).permit(:stock_item_manufacturer, :stock_item_name, :stock_item_standard, :stock_item_strage_condition, :stock_item_description, :name, :image)
+  end
 end

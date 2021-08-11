@@ -60,6 +60,7 @@
         <div class="d-flex">
         <% if user_signed_in? && current_user.admin? %>
         <%= link_to '新規掲載', new_item_path, method: :get, class: "top_button" %>
+        <%= link_to '在庫商品登録', new_stock_item_path, method: :get, class: "top_button" %>
         <% end %>
         <% if user_signed_in? %>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "top_button" %>
@@ -108,7 +109,7 @@
         <p>・在庫品を見て選びたい！</p>
         <p>・少しだけ欲しい！</p>
           <div class="list2-2">
-            <p><a class="btn btn-primary" href="#" role="button">在庫商品を見る &raquo;</a></p>
+            <p><a href="stock_items#index" class="btn btn-primary" role="button">在庫商品を見る &raquo;</a></p>
           </div>
       </div><!-- /.col-lg-4 -->
       <div class="list-3">

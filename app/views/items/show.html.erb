@@ -24,7 +24,7 @@
           <%= link_to "削除する", item_path(@item.id),method: :delete, class: :prototype__btn %>
         </div>
       <% end %>
-      <div class="item__image">
+      <div class="show-top-image">
         <% @item.images.each do |image| %>
           <%= image_tag image, class:'show-image' %>
         <% end %>
