@@ -20,8 +20,10 @@
       </p>
       <% if user_signed_in? && current_user.id == @item.user_id %>
         <div class="item__manage">
-          <%= link_to "編集する", edit_item_path(@item.id),method: :get,  class: :prototype__btn %>
-          <%= link_to "削除する", item_path(@item.id),method: :delete, class: :prototype__btn %>
+          <% if user_signed_in? && current_user.admin? %>
+            <%= link_to "編集する", edit_item_path(@item.id),method: :get,  class: :prototype__btn %>
+            <%= link_to "削除する", item_path(@item.id),method: :delete, class: :prototype__btn %>
+          <% end %>
         </div>
       <% end %>
       <div class="show-top-image">
