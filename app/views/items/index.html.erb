@@ -93,7 +93,7 @@
           <h3 class='item_name'>
             <p><%= link_to item.manufacturer, item_path(item.id), method: :get, class: "item_name2" %></p>
             <p><%= link_to item.item_name, item_path(item.id), method: :get, class: "item_name2" %></p>
-            <p><%= link_to "詳細表示", item_path(item.id), method: :get, class: "btn btn-secondary" %></p>
+            <p><%= link_to "詳細表示", item_path(item.id), method: :get, class: "btn btn-outline-info" %></p>
           </h3>
         </div>
       <% end %>

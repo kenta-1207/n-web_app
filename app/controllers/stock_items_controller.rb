@@ -17,6 +17,27 @@ class StockItemsController < ApplicationController
     end
   end
 
+  def edit
+    @stock_item = StockItem.find(params[:id])
+  end
+
+  def update
+    if @stock_item.update(stock_item_params)
+      redirect_to contacts_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @stock_item = StockItem.find(params[:id])
+    if @stock_item.destroy
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
   private
 
   def stock_item_params
