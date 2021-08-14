@@ -81,22 +81,26 @@
   <%# 在庫商品一覧 %>
   <div class='item-contents'>
     <ul class='item-lists'>
-
       <% @stock_items.each do |stock_item| %>
-        <li class='list'>
-          <p class='item-img-content'>
+        <div class='list'>
+          <div class="item__manage">
+            <% if user_signed_in? && current_user.admin? %>
+              <%= link_to "編集する",edit_stock_item_path(stock_item.id),method: :get,  class: :prototype__btn %>
+              <%= link_to "削除する",stock_item_path(stock_item.id),method: :delete, class: :prototype__btn %>
+            <% end %>
+          </div>
+          <div class='item-img-content'>
               <%= image_tag stock_item.image, class: "item-img"%>
-          </p>
-          <ul class='tag'>
+          </div>
+          <div class='tag'>
             <li class='tag-lists'>
               <% stock_item.tags.each do |tag| %>
-                <%= tag.name %>
+                <p><%= tag.name %></p>
               <% end %>
             </li>
-          </ul>
-        </li>
+          </div>
+        </div>
       <% end %>
-      </div>
     </ul>
   </div>
   <%# /在庫商品一覧 %>

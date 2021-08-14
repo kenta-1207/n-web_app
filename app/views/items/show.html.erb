@@ -18,21 +18,10 @@
       <p class="item__hedding">
         <%= @item.item_name %>
       </p>
-      <% if user_signed_in? && current_user.id == @item.user_id %>
-        <div class="item__manage">
-          <% if user_signed_in? && current_user.admin? %>
-            <%= link_to "編集する", edit_item_path(@item.id),method: :get,  class: :prototype__btn %>
-            <%= link_to "削除する", item_path(@item.id),method: :delete, class: :prototype__btn %>
-          <% end %>
-        </div>
-      <% end %>
       <div class="show-top-image">
         <% @item.images.each do |image| %>
           <%= image_tag image, class:'show-image' %>
         <% end %>
-      </div>
-      <div class="contact-button">
-        <%= link_to 'サンプル依頼する', new_contact_path, method: :get, class: "btn btn-outline-danger" %>
       </div>
       <table class="table table-bordered">
         <thead>
@@ -60,6 +49,16 @@
           </div>
         </div>
       </div>
+        <div class="item-edit">
+          <% if user_signed_in? && current_user.admin? %>
+            <%= link_to "編集する", edit_item_path(@item.id),method: :get,  class: "btn btn-outline-secondary" %>
+            <%= link_to "削除する", item_path(@item.id),method: :delete, class: "btn btn-outline-secondary" %>
+          <% end %>
+        </div>
+        <%= link_to new_contact_path, method: :get, class: 'purchase-btn' do %>
+          <span class='purchase-btn-text'>サンプル  依頼する</span>
+          <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+        <% end %>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
