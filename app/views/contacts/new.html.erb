@@ -19,6 +19,7 @@
         サンプル依頼情報入力
       </h1>
     </div>
+
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">お名前</label>
@@ -26,6 +27,7 @@
       </div>
       <%= f.text_area :contact_user_name, class:"input-default", id:"user_name", placeholder:"（例）山田勉" %>
     </div>
+
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">メールアドレス</label>
@@ -33,6 +35,7 @@
       </div>
       <%= f.email_field :contact_user_email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
     </div>
+    
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">所属</label>
@@ -57,7 +60,6 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">特記事項</label>
-        <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :message, class:"input-default", id:"contact_message", placeholder:"補足があればご記入ください" %>
     </div>
