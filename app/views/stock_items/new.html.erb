@@ -62,55 +62,53 @@
     <div class="form__wrapper">
       <h2 class="page-heading"> 在庫商品の投稿 </h2>
         
-      <%= form_with model: @stock_item, url: stock_items_path, local: true do |f|%>
-      <div class="field">
-        <%= f.label :stock_item_manufacturer, "メーカー名", class: :form_name %><br />
-        <%= f.text_field :stock_item_manufacturer, class: :form_text, id:"item_manufacturer" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :stock_item_name, "商品名", class: :form_name %><br />
-        <%= f.text_field :stock_item_name, class: :form_text, id:"new_item_name" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :stock_item_standard, "規格", class: :form_name %><br />
-        <%= f.text_field :stock_item_standard, class: :form_text, id:"item_standard" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :stock_item_strage_condition, "保存方法", class: :form_name %><br />
-        <%= f.text_field :stock_item_strage_condition, class: :form_text, id:"item_strage_condition" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :stock_item_description, "商品説明", class: :form_name %><br />
-        <%= f.text_area :stock_item_description, class: :form__text, id:"item_description" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :name, "タグ", class: :form_name %><br />
-        <%= f.text_field :name, class: :form__text, id:"item_description" %>
-      </div>
-
-      <div class="parallel">
+      <%= form_with model: @stock_item, url: stock_items_path, local: true do |f| %>
         <div class="field">
-          <%= f.label :image, "新商品の画像", class: :form_name %><br />
-          <%= f.file_field :image, id:"item_image", class: :form_name %>
+          <%= f.label :stock_item_manufacturer, "メーカー名", class: :form_name %><br />
+          <%= f.text_field :stock_item_manufacturer, class: :form_text, id:"item_manufacturer" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :stock_item_name, "商品名", class: :form_name %><br />
+          <%= f.text_field :stock_item_name, class: :form_text, id:"new_item_name" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :stock_item_standard, "規格", class: :form_name %><br />
+          <%= f.text_field :stock_item_standard, class: :form_text, id:"item_standard" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :stock_item_strage_condition, "保存方法", class: :form_name %><br />
+          <%= f.text_field :stock_item_strage_condition, class: :form_text, id:"item_strage_condition" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :stock_item_description, "商品説明", class: :form_name %><br />
+          <%= f.text_area :stock_item_description, class: :form__text, id:"item_description" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :tag_word, "タグ", class: :form_name %><br />
+          <%= f.text_field :tag_word, class: :form_text, id:"item_tag" %>
+        </div>
+
+        <div class="parallel">
+          <div class="field">
+            <%= f.label :image, "新商品の画像", class: :form_name %><br />
+            <%= f.file_field :image, id:"item_image", class: :form_name %>
+          </div>
         </div>
 
         <div class="actions">
           <%= f.submit "保存する", class: :send, class: :form_name  %>
         </div>
         <div id="image-list" ></div>
-      </div>
+      <% end %>
     </div>
   </div>
-<% end %>
-
-
-
 </div>
+
 <%= render "shared/second-footer" %>
 
 <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
