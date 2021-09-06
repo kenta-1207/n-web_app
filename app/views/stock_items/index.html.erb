@@ -67,7 +67,7 @@
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>新商品一覧</strong>
+        <strong>N-Web-Apprication</strong>
       </a>
       <div class="d-flex">
         <%= link_to "トップへ", root_path, class: "top_button" %>
@@ -77,19 +77,28 @@
 
 <main>
 
+  <%# 商品の検索 %>
+  <div class='stock_item_search'>
+    <h1>
+      在庫商品検索
+    </h1>
+    <%= search_form_for @p, url: search_stock_items_path do |f| %>
+      <%= f.label :tag_word_eq, 'タグ' %>
+      <%= f.collection_select :stock_item_manufacturer_eq, Genre.all, :name, :name, include_blanck: '指定なし' %>
+      <%= f.submit '検索'%>
+    <% end %>
+  </div>
 
   <%# 在庫商品一覧 %>
   <div class='item-contents'>
     <ul class='item-lists'>
       <% @stock_items.each do |stock_item| %>
         <div class='list'>
-          <div class="item__manage">
-            <% if user_signed_in? && current_user.admin? %>
-              <%= link_to "編集する",edit_stock_item_path(stock_item.id),method: :get,  class: :prototype__btn %>
-              <%= link_to "削除する",stock_item_path(stock_item.id),method: :delete, class: :prototype__btn %>
-            <% end %>
-          </div>
           <div class='item-img-content'>
+            <ul class="item-index">
+              <li><%= stock_item.stock_item_manufacturer %></li>
+              <li><%= stock_item.stock_item_name %></li>
+            </ul>
               <%= image_tag stock_item.image, class: "item-img"%>
           </div>
           <div class='tag'>
@@ -99,6 +108,12 @@
               <% end %>
             </li>
           </div>
+          <div class="stock_item-edit">
+          <% if user_signed_in? && current_user.admin? %>
+            <%= link_to "編集する", edit_stock_item_path(stock_item.id),method: :get,  class: "btn btn-outline-secondary" %>
+            <%= link_to "削除する", stock_item_path(stock_item.id),method: :delete, class: "btn btn-outline-secondary" %>
+          <% end %>
+        </div>
         </div>
       <% end %>
     </ul>

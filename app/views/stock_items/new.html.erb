@@ -90,7 +90,7 @@
 
         <div class="field">
           <%= f.label :tag_word, "タグ", class: :form_name %><br />
-          <%= f.text_field :tag_word, class: :form_text, id:"item_tag" %>
+          <%= f.collection_select(:tag_word, Genre.all, :name, :name, {}, {class:"form__text"}) %>
         </div>
 
         <div class="parallel">
