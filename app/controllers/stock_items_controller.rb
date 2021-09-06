@@ -1,5 +1,7 @@
 class StockItemsController < ApplicationController
 
+  before_action :search_stock_item, only: [:index, :search]
+
   def index
     @stock_items = StockItem.all.order(created_at: :desc)
   end
@@ -38,10 +40,18 @@ class StockItemsController < ApplicationController
     end
   end
 
+  def search
+    @results = @p.result.includes(:tag)
+  end
+
   private
 
   def stock_item_params
     params.require(:items_tag).permit(:stock_item_manufacturer, :stock_item_name, :stock_item_standard, :stock_item_strage_condition, :stock_item_description, :image, :tag_word)
+  end
+
+  def search_stock_item
+    @p = StockItem.ransack(params[:q])
   end
 
 end
