@@ -112,7 +112,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'n-wed-app.herokuapp.com/' }
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-  if page_select_id = 1
     address:              'smtp.gmail.com',
     enable_starttls_auto: true,
     port:                 587,
@@ -120,14 +119,5 @@ config.action_mailer.smtp_settings = {
     user_name:            'ktnstn.237rogs@gmail.com',
     password:             'upjudszfquryxkms',
     authentication:       :plain
-  if page_select_id = 2
-    address:              'smtp.icloud.com',
-    enable_starttls_auto: true,
-    port:                 587,
-    domain:               'icloud.com',
-    user_name:            'tessin1396@icloud.com',
-    password:             'upjudszfquryxkms',
-    authentication:       :plain
-  end
   }
 end
