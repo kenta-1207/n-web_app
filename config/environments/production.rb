@@ -112,7 +112,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'n-wed-app.herokuapp.com/' }
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-    contact_user_belong_id: 1,
     address:              'smtp.gmail.com',
     enable_starttls_auto: true,
     port:                 587,
@@ -123,7 +122,6 @@ config.action_mailer.smtp_settings = {
   }
 
 config.action_mailer.smtp_settings = {
-    contact_user_belong_id: 2,
     address:              'smtp.icloud.com',
     enable_starttls_auto: true,
     port:                 587,
