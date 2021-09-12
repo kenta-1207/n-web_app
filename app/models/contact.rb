@@ -8,5 +8,6 @@ class Contact < ApplicationRecord
     validates :contact_user_occupation
     validates :contact_manufacturer
     validates :contact_item_name
+    validates :contact_user_belong_id
   end
 end

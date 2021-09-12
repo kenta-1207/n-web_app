@@ -127,7 +127,6 @@ config.action_mailer.smtp_settings = {
     port:                 587,
     domain:               'icloud.com',
     user_name:            'tessin1396@icloud.com',
-    password:             'upjudszfquryxkms',
     authentication:       :plain
   }
 end

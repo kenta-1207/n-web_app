@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_112715) do
     t.string "contact_manufacturer", null: false
     t.string "contact_item_name", null: false
     t.text "message"
+    t.integer "contact_user_belong_id", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
