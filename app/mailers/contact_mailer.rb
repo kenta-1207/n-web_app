@@ -1,4 +1,6 @@
 class ContactMailer < ApplicationMailer
+  has_many :users
+  
   def contact_mail(contact)
     @contact = contact
     if current_user.page_select_id = 1
