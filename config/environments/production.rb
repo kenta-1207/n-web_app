@@ -120,3 +120,4 @@ config.action_mailer.smtp_settings = {
     password:             'upjudszfquryxkms',
     authentication:       :plain
   }
+end
