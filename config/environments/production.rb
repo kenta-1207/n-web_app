@@ -121,6 +121,7 @@ config.action_mailer.delivery_method = :smtp
         password:             'upjudszfquryxkms',
         authentication:       :plain
       }
+  end
   if contact_user_belong_id = 2
     config.action_mailer.smtp_settings = {
         address:              'smtp.icloud.com',
