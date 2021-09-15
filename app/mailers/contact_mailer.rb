@@ -6,7 +6,7 @@ class ContactMailer < ApplicationMailer
     if @contact.contact_user_belong_id == 2
       mail to:"tessin1396@icloud.com",subject: "サンプル依頼が届きました。"
     else
-      render :root_path
+      redirect_to root_path
     end
     end
   end
