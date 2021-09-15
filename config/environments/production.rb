@@ -111,24 +111,24 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.action_mailer.default_url_options = { host: 'n-wed-app.herokuapp.com/' }
 config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-    contact_user_belong_id: 1
-    address:              'smtp.gmail.com',
-    enable_starttls_auto: true,
-    port:                 587,
-    domain:               'gmail.com',
-    user_name:            'ktnstn.237rogs@gmail.com',
-    password:             'upjudszfquryxkms',
-    authentication:       :plain
-  }
-
-config.action_mailer.smtp_settings = {
-    contact_user_belong_id: 2
-    address:              'smtp.icloud.com',
-    enable_starttls_auto: true,
-    port:                 587,
-    domain:               'icloud.com',
-    user_name:            'tessin1396@icloud.com',
-    authentication:       :plain
-  }
+  if contact_user_belong_id = 1
+    config.action_mailer.smtp_settings = {
+        address:              'smtp.gmail.com',
+        enable_starttls_auto: true,
+        port:                 587,
+        domain:               'gmail.com',
+        user_name:            'ktnstn.237rogs@gmail.com',
+        password:             'upjudszfquryxkms',
+        authentication:       :plain
+      }
+  if contact_user_belong_id = 2
+    config.action_mailer.smtp_settings = {
+        address:              'smtp.icloud.com',
+        enable_starttls_auto: true,
+        port:                 587,
+        domain:               'icloud.com',
+        user_name:            'tessin1396@icloud.com',
+        authentication:       :plain
+      }
+  end
 end
