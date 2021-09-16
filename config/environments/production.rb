@@ -111,7 +111,6 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.action_mailer.default_url_options = { host: 'n-wed-app.herokuapp.com/' }
 config.action_mailer.delivery_method = :smtp
-  if contact_user_belong_id = 1
     config.action_mailer.smtp_settings = {
         address:              'smtp.gmail.com',
         enable_starttls_auto: true,
@@ -121,15 +120,4 @@ config.action_mailer.delivery_method = :smtp
         password:             'upjudszfquryxkms',
         authentication:       :plain
       }
-  end
-  if contact_user_belong_id = 2
-    config.action_mailer.smtp_settings = {
-        address:              'smtp.icloud.com',
-        enable_starttls_auto: true,
-        port:                 587,
-        domain:               'icloud.com',
-        user_name:            'tessin1396@icloud.com',
-        authentication:       :plain
-      }
-  end
 end
