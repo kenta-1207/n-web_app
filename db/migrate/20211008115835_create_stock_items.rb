@@ -6,6 +6,7 @@ class CreateStockItems < ActiveRecord::Migration[6.0]
       t.string :stock_item_standard,         null: false
       t.string :stock_item_strage_condition, null: false
       t.text :stock_item_description,        null: false
+      t.references :tag,                     foreign_key: true
       t.timestamps
     end
   end

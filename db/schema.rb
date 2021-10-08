@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_112715) do
+ActiveRecord::Schema.define(version: 2021_10_08_115855) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -44,13 +44,6 @@ ActiveRecord::Schema.define(version: 2021_08_24_112715) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_contacts_on_user_id"
-  end
-
-  create_table "inquiries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "message"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "item_connects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -90,8 +83,10 @@ ActiveRecord::Schema.define(version: 2021_08_24_112715) do
     t.string "stock_item_standard", null: false
     t.string "stock_item_strage_condition", null: false
     t.text "stock_item_description", null: false
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id"], name: "index_stock_items_on_tag_id"
   end
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -133,6 +128,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_112715) do
   add_foreign_key "item_connects", "tags"
   add_foreign_key "items", "users"
   add_foreign_key "school_lunches", "users"
+  add_foreign_key "stock_items", "tags"
   add_foreign_key "user_contacts", "contacts"
   add_foreign_key "user_contacts", "users"
 end
