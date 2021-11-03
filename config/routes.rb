@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :items
   resources :school_lunches, only: [:index, :new, :create]
   resources :contacts
-  resources :stock_items, only: [:index, :new, :create, :update, :edit, :destroy]
-  get 'stock_items/search'
+  resources :stock_items, only: [:index, :new, :create, :update, :edit, :destroy] do
+    collection do
+      get 'search'
+    end
+  end
 end

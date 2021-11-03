@@ -17,8 +17,10 @@ class Genre < ActiveHash::Base
     { id: 16, name: '洋食' },
     { id: 17, name: '前菜' },
     { id: 18, name: '八寸' },
-    { id: 19, name: 'ベスト' }
-
+    { id: 19, name: 'ベスト' },
+    { id: 20, name: '調味料' },
+    { id: 21, name: '肉' },
+    { id: 22, name: '野菜' }
   ]
  
    include ActiveHash::Associations

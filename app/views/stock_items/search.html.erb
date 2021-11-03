@@ -6,13 +6,13 @@
   <% @results.each do |result| %>
     <div class='list'>
       <div class='item-img-content'>
-          <%= image_tag stock_item.image, class: "item-img"%>
+          <%= image_tag result.image, class: "item-img"%>
       </div>
       <div class='tag'>
         <li class='tag-lists'>
-          <% stock_item.tags.each do |tag| %>
+          <% result.tags.each do |tag| %>
             <p><%= tag.tag_word %></p>
-          <% end %>
+          <<% end %>
         </li>
       </div>
     </div>

@@ -41,7 +41,7 @@ class StockItemsController < ApplicationController
   end
 
   def search
-    @results = @p.result.includes(:tag)
+    @results = @q.result.includes(:tags)
   end
 
   private
@@ -51,7 +51,7 @@ class StockItemsController < ApplicationController
   end
 
   def search_stock_item
-    @p = StockItem.ransack(params[:q])
+    @q = StockItem.ransack(params[:q])
   end
 
 end
