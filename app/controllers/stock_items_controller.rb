@@ -13,9 +13,9 @@ class StockItemsController < ApplicationController
   def create
     @stock_item = ItemsTag.new(stock_item_params)
     if @stock_item.save
-      return redirect_to root_path
+      redirect_to root_path
     else
-      render "new"
+      render :new
     end
   end
 
