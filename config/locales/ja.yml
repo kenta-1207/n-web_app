@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: お名前
+        name_ruby: お名前かな
+        occupation: 所属
+        position: 立場
+      item:
+        manufacturer: メーカー名
+        item_name: 商品名
+        standard: 規格
+        storage_condition: 保存方法
+        description: 商品説明
+        images: 新商品の画像
