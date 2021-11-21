@@ -1,4 +1,7 @@
-<%= form_with model: @item, local: true do |f|%>
+<%= form_with model: @item, local: true do |f| %>
+
+<%= render 'shared/error_messages', model: f.object %>
+
   <div class="field">
     <%= f.label :manufacturer, "メーカー名", class: :form_name %><br />
     <%= f.text_field :manufacturer, class: :form_text, id:"item_manufacturer" %>
