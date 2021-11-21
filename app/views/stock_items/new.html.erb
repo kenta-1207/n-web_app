@@ -63,6 +63,9 @@
       <h2 class="page-heading"> 在庫商品の投稿 </h2>
         
       <%= form_with model: @stock_item, url: stock_items_path, local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+      
         <div class="field">
           <%= f.label :stock_item_manufacturer, "メーカー名", class: :form_name %><br />
           <%= f.text_field :stock_item_manufacturer, class: :form_text, id:"item_manufacturer" %>
@@ -103,7 +106,7 @@
         <div class="actions">
           <%= f.submit "保存する", class: :send, class: :form_name  %>
         </div>
-        <div id="image-list" ></div>
+        <div id="tag-list" ></div>
       <% end %>
     </div>
   </div>

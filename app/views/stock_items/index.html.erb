@@ -84,7 +84,7 @@
     </h1>
     <%= search_form_for @q, url: search_stock_items_path do |f| %>
       <%= f.label :tag_word_eq, 'タグ' %>
-      <%= f.collection_select :tags_tag_word_eq, Genre.all, :name, :name, include_blanck: '指定なし' %>
+      <%= f.collection_select :tags_tag_word_eq, Genre.all, :name, :name, include_blanck: '指定なし', id: "tag-select" %>
       <%= f.submit '検索'%>
     <% end %>
   </div>
