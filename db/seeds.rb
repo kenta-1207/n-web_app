@@ -1,8 +1,8 @@
-User.create!(name: "渡辺健太",
-             name_ruby: "わたなべけんた",
-             email: "ktnstn.237rogs@gmail.com",
-             password: "tessin1396",
-             occupation: "ナカヤマ",
+User.create!(name: "渡辺凪",
+             name_ruby: "わたなべなぎ",
+             email: "tessin1396@icloud.com",
+             password: "nagi1128",
+             occupation: "小学生",
              position: "管理者",
              page_select_id: 2,
              admin: true)
