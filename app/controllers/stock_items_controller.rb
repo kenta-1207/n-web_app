@@ -1,5 +1,6 @@
 class StockItemsController < ApplicationController
-
+  before_action :authenticate_user!
+  before_action :set_stock_item, only: [:edit, :destroy]
   before_action :search_stock_item, only: [:index, :search]
 
   def index
@@ -20,7 +21,6 @@ class StockItemsController < ApplicationController
   end
 
   def edit
-    @stock_item = StockItem.find(params[:id])
   end
 
   def update
@@ -32,7 +32,6 @@ class StockItemsController < ApplicationController
   end
 
   def destroy
-    @stock_item = StockItem.find(params[:id])
     if @stock_item.destroy
       redirect_to root_path
     else
@@ -52,6 +51,10 @@ class StockItemsController < ApplicationController
 
   def search_stock_item
     @q = StockItem.ransack(params[:q])
+  end
+
+  def det_stock_item
+    @stock_item = StockItem.find(params[:id])
   end
 
 end
