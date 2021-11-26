@@ -53,7 +53,7 @@ class StockItemsController < ApplicationController
     @q = StockItem.ransack(params[:q])
   end
 
-  def det_stock_item
+  def set_stock_item
     @stock_item = StockItem.find(params[:id])
   end
 
