@@ -105,7 +105,7 @@
               <li><%= stock_item.stock_item_manufacturer %></li>
               <li><%= stock_item.stock_item_name %></li>
             </ul>
-              <%= link_to image, "data-lightbox": image do %>
+              <%= link_to stock_item.image, "data-lightbox": image do %>
                 <%= image_tag stock_item.image, class: "item-img"%>
               <% end %>
           </div>
