@@ -100,7 +100,9 @@
               <li><%= result.stock_item_name %></li>
             </ul>
             <div class='item-img-content'>
-              <%= image_tag result.image, class: "item-img"%>
+              <%= link_to result.image, "data-lightbox": result.image do %>
+                <%= image_tag result.image, class: "item-img"%>
+              <% end %>
             </div>
           </div>
           <div class='tag'>
