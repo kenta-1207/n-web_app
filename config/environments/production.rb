@@ -110,14 +110,15 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.action_mailer.default_url_options = { host: 'n-wed-app.herokuapp.com/' }
-config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-        address:              'smtp.gmail.com',
-        enable_starttls_auto: true,
-        port:                 587,
-        domain:               'gmail.com',
-        user_name:            'ktnstn.237rogs@gmail.com',
-        password:             'upjudszfquryxkms',
-        authentication:       :plain
-      }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.net-nakayama.co.jp',
+    enable_starttls_auto: true,
+    port:                 587,
+    domain:               'net-nakayama.co.jp',
+    user_name:            'k-watanabe@net-nakayama.co.jp',
+    password:             'upjudszfquryxkms',
+    authentication:       :plain
+  }
+  
 end
