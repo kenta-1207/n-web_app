@@ -116,7 +116,7 @@ Rails.application.configure do
     enable_starttls_auto: true,
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'n_web_app',
+    user_name:            'ktnstn.237rogs@gmail.com',
     password:             'upjudszfquryxkms',
     authentication:       :plain
   }
