@@ -1,5 +1,5 @@
 User.create!(name: "admin",
-             name_ruby: "アドミン",
+             name_ruby: "あどみん",
              email: "aaa@aaa",
              password: "111111",
              occupation: "ナカヤマ",
