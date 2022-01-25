@@ -112,9 +112,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'n-wed-app.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.net-nakayama.co.jp',
+    address:              'smtp.gmail.com',
+    enable_starttls_auto: true,
     port:                 587,
-    user_name:            'k-watanabe@net-nakayama.co.jp',
+    domain:               'gmail.com',
+    user_name:            'ktnstn.237rogs@gmail.com',
+    password:             'upjudszfquryxkms',
+    authentication:       :plain
   }
   
 end
