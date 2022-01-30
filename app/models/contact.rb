@@ -1,6 +1,5 @@
 class Contact < ApplicationRecord
-  has_many :users, through: :user_contacts
-  has_many :user_contacts
+  belongs_to :user
 
   with_options presence: true do
     validates :contact_user_name

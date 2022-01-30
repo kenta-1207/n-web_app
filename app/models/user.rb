@@ -4,8 +4,7 @@ class User < ApplicationRecord
   
   has_many :items
   has_many :school_items
-  has_many :user_contacts
-  has_many :contacts, through: :user_contacts
+  has_many :contacts
        
   
   with_options presence: true do
